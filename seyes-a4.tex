@@ -1,0 +1,40 @@
+\documentclass[a4paper, 10pt]{article} % for A4 size paper
+\usepackage{tikz}
+
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{tikzpicture}[remember picture, overlay]
+
+\tikzset{8mm lines/.style={gray, thin}} 
+\tikzset{2mm lines/.style={gray, ultra thin}}  
+
+\node at ([xshift=5mm, yshift=8mm] current page.south west){
+  \begin{tikzpicture}[remember picture, overlay]
+
+    \draw[style=8mm lines,step=8mm] (0,0) grid +(200mm,280mm); 
+    \foreach \h in {0,2,...,280}{
+        \draw[2mm lines] (0,\h mm) -- (200mm,\h mm);
+    }
+  \end{tikzpicture}
+};
+\end{tikzpicture}
+\newpage
+\begin{tikzpicture}[remember picture, overlay]
+
+    \tikzset{8mm lines/.style={gray, thin}} 
+    \tikzset{2mm lines/.style={gray, ultra thin}}  
+    
+    \node at ([xshift=5mm, yshift=8mm] current page.south west){
+      \begin{tikzpicture}[remember picture, overlay]
+    
+        \draw[style=8mm lines,step=8mm] (0,0) grid +(200mm,280mm); 
+        \foreach \h in {0,2,...,280}{
+            \draw[2mm lines] (0,\h mm) -- (200mm,\h mm);
+        }
+      \end{tikzpicture}
+    };
+    \end{tikzpicture}
+
+\end{document}

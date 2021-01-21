@@ -1,0 +1,40 @@
+\documentclass[a4paper, 10pt,landscape]{article} % for A4 size paper and slicing
+\usepackage{tikz}
+
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{tikzpicture}[remember picture, overlay]
+
+\tikzset{8mm lines/.style={gray, thin}} 
+\tikzset{2mm lines/.style={gray, ultra thin}}  
+
+\node at ([xshift=8.5mm, yshift=5mm] current page.south west){
+  \begin{tikzpicture}[remember picture, overlay]
+
+    \draw[style=8mm lines,step=8mm] (0,0) grid +(280mm,200mm); 
+    \foreach \h in {0,2,...,200}{
+        \draw[2mm lines] (0,\h mm) -- (280mm,\h mm);
+    }
+  \end{tikzpicture}
+};
+\end{tikzpicture}
+\newpage
+\begin{tikzpicture}[remember picture, overlay]
+
+    \tikzset{8mm lines/.style={gray, thin}} 
+    \tikzset{2mm lines/.style={gray, ultra thin}}  
+\node at ([xshift=8.5mm, yshift=5mm] current page.south west){
+  \begin{tikzpicture}[remember picture, overlay]
+
+    \draw[style=8mm lines,step=8mm] (0,0) grid +(280mm,200mm); 
+    \foreach \h in {0,2,...,200}{
+        \draw[2mm lines] (0,\h mm) -- (280mm,\h mm);
+    }
+  \end{tikzpicture}
+};
+\end{tikzpicture}
+
+
+\end{document}

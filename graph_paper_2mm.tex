@@ -1,0 +1,30 @@
+\documentclass[a4paper, 10pt]{article} % for A4 size paper
+\usepackage{tikz}
+
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{tikzpicture}[remember picture, overlay]
+
+\tikzset{normal lines/.style={gray, very thin}} 
+\tikzset{margin lines/.style={gray, thick}} 
+\tikzset{mm lines/.style={gray, ultra thin}} 
+\tikzset{middle lines/.style={gray, very thin}}
+\tikzset{strong lines/.style={black, thin}} 
+\tikzset{master lines/.style={black, very thick}} 
+\tikzset{dashed master lines/.style={loosely dashed, black, very thick}} 
+
+\node at ([xshift=2cm, yshift=1.8cm] current page.south west){
+  \begin{tikzpicture}[remember picture, overlay]
+
+    \draw[style=mm lines,step=2mm] (0,0) grid +(18cm,26cm); 
+    \draw[style=strong lines,step=2cm] (0,0) grid +(18cm,26cm); 
+    \draw[style=middle lines, step=1cm] (0,0) grid +(18cm,26cm);
+
+  \end{tikzpicture}
+};
+\end{tikzpicture}
+
+
+\end{document}

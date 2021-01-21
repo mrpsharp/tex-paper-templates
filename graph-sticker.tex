@@ -1,0 +1,59 @@
+\documentclass[a4paper, 10pt]{article} % for A4 size paper
+\usepackage{tikz}
+
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{tikzpicture}[remember picture, overlay]
+
+\tikzset{normal lines/.style={gray, very thin}} 
+\tikzset{margin lines/.style={gray, thick}} 
+\tikzset{mm lines/.style={gray, ultra thin}} 
+\tikzset{middle lines/.style={gray, very thin}}
+\tikzset{strong lines/.style={black, thin}} 
+\tikzset{master lines/.style={black, very thick}} 
+\tikzset{dashed master lines/.style={loosely dashed, black, very thick}} 
+
+% 10x7
+% \node at ([xshift=0.5cm, yshift=0.25cm] current page.south west){
+%   \begin{tikzpicture}[remember picture, overlay]
+
+%     \draw[style=mm lines,step=2mm] (0,0) grid +(20cm,14cm); 
+%     \draw[style=strong lines,step=2cm] (0,0) grid +(20cm,14cm); 
+%     \draw[style=middle lines, step=1cm] (0,0) grid +(20cm,14cm);
+
+%   \end{tikzpicture}
+% };
+% \node at ([xshift=0.5cm, yshift=15.25cm] current page.south west){
+%   \begin{tikzpicture}[remember picture, overlay]
+
+%     \draw[style=mm lines,step=2mm] (0,0) grid +(20cm,14cm); 
+%     \draw[style=strong lines,step=2cm] (0,0) grid +(20cm,14cm); 
+%     \draw[style=middle lines, step=1cm] (0,0) grid +(20cm,14cm);
+
+%   \end{tikzpicture}
+% };
+% \end{tikzpicture}
+
+% 9x6
+\node at ([xshift=1.5cm, yshift=1cm] current page.south west){
+  \begin{tikzpicture}[remember picture, overlay]
+
+    \draw[style=mm lines,step=1.8mm] (0,0) grid +(18cm,12.6cm); 
+    \draw[style=strong lines,step=1.8cm] (0,0) grid +(18cm,12.6cm); 
+
+  \end{tikzpicture}
+};
+\node at ([xshift=1.5cm, yshift=16cm] current page.south west){
+  \begin{tikzpicture}[remember picture, overlay]
+
+    \draw[style=mm lines,step=1.8mm] (0,0) grid +(18cm,12.6cm); 
+    \draw[style=strong lines,step=1.8cm] (0,0) grid +(18cm,12.6cm); 
+
+  \end{tikzpicture}
+};
+\end{tikzpicture}
+
+
+\end{document}
